@@ -1,0 +1,33 @@
+﻿using System;
+using Xamarin.Forms;
+
+
+namespace FormStandard
+{
+    public class StandardImage : FormTest.Image
+	{
+		public StandardImage()
+		{
+			VerticalOptions = LayoutOptions.Fill;
+			HorizontalOptions = LayoutOptions.Fill;
+			var panGesture = new PanGestureRecognizer();
+			panGesture.PanUpdated += (s, e) =>
+			{
+				if(PanCommand.CanExecute(e))
+				{
+					PanCommand.Execute(e);
+				}
+			};
+			this.GestureRecognizers.Add(panGesture);
+		}
+
+		public static readonly BindableProperty PanCommandProperty =
+			BindableProperty.Create(nameof(PanCommandProperty), typeof(Command), typeof(StandardImage), new Command(() => { }), BindingMode.Default);
+		public Command PanCommand
+		{
+			get { return (Command)GetValue(PanCommandProperty); }
+			set { SetValue(PanCommandProperty, value); }
+		}
+	}
+}
+
