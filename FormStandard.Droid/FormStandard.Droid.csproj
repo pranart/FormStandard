@@ -153,16 +153,16 @@
   </ItemGroup>
   <ItemGroup>
     <ProjectReference Include="..\FormStandard\FormStandard.csproj">
-      <Project>{6871445B-7C60-49FD-AD34-81CD868CEBAB}</Project>
+      <Project>{63F74008-43A5-49A1-9B37-B5EE7B47EABD}</Project>
       <Name>FormStandard</Name>
     </ProjectReference>
     <ProjectReference Include="..\FormsTest\FormTest\FormTest.csproj">
-      <Project>{F83DB8C2-EF2B-4185-A7D0-B197A762D2D5}</Project>
+      <Project>{93383BA7-29A3-4C5E-AABB-273060CBB5AC}</Project>
       <Name>FormTest</Name>
     </ProjectReference>
     <ProjectReference Include="..\FormsTest\FormsTest.Droid\FormsTest.Droid.csproj">
       <Project>{4A88779B-390A-4CE2-8186-6E2B96F02801}</Project>
-      <Name>FormsTest.Droid</Name>
+      <Name>FormTest.Droid</Name>
     </ProjectReference>
   </ItemGroup>
   <ItemGroup>

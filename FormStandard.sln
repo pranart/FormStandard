@@ -1,7 +1,19 @@
 
 Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio 15
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "FormStandard", "FormStandard\FormStandard.csproj", "{C97CAD87-6139-4CAA-9814-39D2571328E6}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "FormStandard", "FormStandard\FormStandard.csproj", "{63F74008-43A5-49A1-9B37-B5EE7B47EABD}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "FormStandard.Droid", "FormStandard.Droid\FormStandard.Droid.csproj", "{C516FED2-12B1-45BD-96EE-74F31A5F7022}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "FormStandard.iOS", "FormStandard.iOS\FormStandard.iOS.csproj", "{27B765D4-069C-404D-98EE-FB85C92B601D}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "FormTest", "FormTest", "{02BF9A6F-E6B9-4299-A305-BEB8CC2E5E62}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "FormTest", "FormTest\FormTest\FormTest.csproj", "{93383BA7-29A3-4C5E-AABB-273060CBB5AC}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "FormTest.Droid", "FormTest\FormTest.Droid\FormTest.Droid.csproj", "{4A88779B-390A-4CE2-8186-6E2B96F02801}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "FormTest.iOS", "FormTest\FormTest.iOS\FormTest.iOS.csproj", "{EFC62B2C-D2E3-4F9E-93DA-5B3FC26ED9F2}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -9,9 +21,34 @@ Global
 		Release|Any CPU = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(ProjectConfigurationPlatforms) = postSolution
-		{C97CAD87-6139-4CAA-9814-39D2571328E6}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{C97CAD87-6139-4CAA-9814-39D2571328E6}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{C97CAD87-6139-4CAA-9814-39D2571328E6}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{C97CAD87-6139-4CAA-9814-39D2571328E6}.Release|Any CPU.Build.0 = Release|Any CPU
+		{63F74008-43A5-49A1-9B37-B5EE7B47EABD}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{63F74008-43A5-49A1-9B37-B5EE7B47EABD}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{63F74008-43A5-49A1-9B37-B5EE7B47EABD}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{63F74008-43A5-49A1-9B37-B5EE7B47EABD}.Release|Any CPU.Build.0 = Release|Any CPU
+		{C516FED2-12B1-45BD-96EE-74F31A5F7022}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{C516FED2-12B1-45BD-96EE-74F31A5F7022}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{C516FED2-12B1-45BD-96EE-74F31A5F7022}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{C516FED2-12B1-45BD-96EE-74F31A5F7022}.Release|Any CPU.Build.0 = Release|Any CPU
+		{27B765D4-069C-404D-98EE-FB85C92B601D}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{27B765D4-069C-404D-98EE-FB85C92B601D}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{27B765D4-069C-404D-98EE-FB85C92B601D}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{27B765D4-069C-404D-98EE-FB85C92B601D}.Release|Any CPU.Build.0 = Release|Any CPU
+		{93383BA7-29A3-4C5E-AABB-273060CBB5AC}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{93383BA7-29A3-4C5E-AABB-273060CBB5AC}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{93383BA7-29A3-4C5E-AABB-273060CBB5AC}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{93383BA7-29A3-4C5E-AABB-273060CBB5AC}.Release|Any CPU.Build.0 = Release|Any CPU
+		{4A88779B-390A-4CE2-8186-6E2B96F02801}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{4A88779B-390A-4CE2-8186-6E2B96F02801}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{4A88779B-390A-4CE2-8186-6E2B96F02801}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{4A88779B-390A-4CE2-8186-6E2B96F02801}.Release|Any CPU.Build.0 = Release|Any CPU
+		{EFC62B2C-D2E3-4F9E-93DA-5B3FC26ED9F2}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{EFC62B2C-D2E3-4F9E-93DA-5B3FC26ED9F2}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{EFC62B2C-D2E3-4F9E-93DA-5B3FC26ED9F2}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{EFC62B2C-D2E3-4F9E-93DA-5B3FC26ED9F2}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(NestedProjects) = preSolution
+		{93383BA7-29A3-4C5E-AABB-273060CBB5AC} = {02BF9A6F-E6B9-4299-A305-BEB8CC2E5E62}
+		{4A88779B-390A-4CE2-8186-6E2B96F02801} = {02BF9A6F-E6B9-4299-A305-BEB8CC2E5E62}
+		{EFC62B2C-D2E3-4F9E-93DA-5B3FC26ED9F2} = {02BF9A6F-E6B9-4299-A305-BEB8CC2E5E62}
 	EndGlobalSection
 EndGlobal
