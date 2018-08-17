@@ -1,9 +1,9 @@
 ﻿using System;
-using NeatLibrary.iOS;
+using FormStandard.iOS;
 using Xamarin.Forms;
 
 [assembly:Dependency(typeof(Navigate))]
-namespace NeatLibrary.iOS
+namespace FormStandard.iOS
 {
     public class Navigate : INavigate
     {

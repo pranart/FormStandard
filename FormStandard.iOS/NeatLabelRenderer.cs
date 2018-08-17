@@ -4,15 +4,15 @@ using Xamarin.Forms.Platform.iOS;
 using UIKit;
 
 using System.Diagnostics;
-using NeatLibrary;
-using NeatLibrary.iOS;
+using FormStandard;
+using FormStandard.iOS;
 using Xamarin.Forms.Internals;
 
-[assembly: ExportRenderer (typeof (NeatLabel), typeof (NeatLabelRenderer))]
-namespace NeatLibrary.iOS
+[assembly: ExportRenderer (typeof (StandardLabel), typeof (StandardLabelRenderer))]
+namespace FormStandard.iOS
 {
     [Preserve]
-	public class NeatLabelRenderer : LabelRenderer {
+	public class StandardLabelRenderer : LabelRenderer {
 
 		static public void Initialize() 
 		{ 
@@ -23,7 +23,7 @@ namespace NeatLibrary.iOS
 		}
 		private void Recreate()
 		{
-			NeatLabel customLabel = Element as NeatLabel;
+			StandardLabel customLabel = Element as StandardLabel;
 			try
 			{
 				Recreate (customLabel.FontSize);
@@ -32,7 +32,7 @@ namespace NeatLibrary.iOS
 		}
 		private void Recreate (double fontSize)
 		{
-			NeatLabel customLabel = Element as NeatLabel;
+			StandardLabel customLabel = Element as StandardLabel;
 			if (customLabel == null ) return;
 
 			UILabel label = Control as UILabel;

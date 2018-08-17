@@ -2,11 +2,11 @@
 using Xamarin.Auth;
 using Xamarin.Forms.Platform.iOS;
 using Xamarin.Forms;
-using NeatLibrary;
-using NeatLibrary.iOS;
+using FormStandard;
+using FormStandard.iOS;
 
 [assembly: ExportRenderer(typeof(InstagramLoginPage), typeof(InstagramLoginPageRenderer))]
-namespace NeatLibrary.iOS
+namespace FormStandard.iOS
 {
 	public class InstagramLoginPageRenderer : PageRenderer
 	{

@@ -1,12 +1,12 @@
 ﻿using System;
-using NeatLibrary.iOS;
+using FormStandard.iOS;
 using CoreGraphics;
 using System.Collections.Generic;
 using UIKit;
 using Foundation;
 
 [assembly: Xamarin.Forms.Dependency(typeof(Toast))]
-namespace NeatLibrary.iOS
+namespace FormStandard.iOS
 {
     public class Toast : IToast
     {

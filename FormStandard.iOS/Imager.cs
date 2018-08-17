@@ -4,13 +4,13 @@ using System.Threading.Tasks;
 using System.Drawing;
 using UIKit;
 using CoreGraphics;
-using NeatLibrary.iOS;
+using FormStandard.iOS;
 using Xamarin.Forms;
 using System.Collections.Generic;
 using Foundation;
 
-[assembly:Dependency(typeof(NeatLibrary.iOS.Imager))]
-namespace NeatLibrary.iOS
+[assembly:Dependency(typeof(FormStandard.iOS.Imager))]
+namespace FormStandard.iOS
 {
 
     public class Imager : IImage

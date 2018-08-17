@@ -1,15 +1,15 @@
 ﻿using System;
 using System.Globalization;
 using System.Threading;
-using NeatLibrary.iOS;
+using FormStandard.iOS;
 using Xamarin.Forms;
 
-[assembly:Dependency(typeof(NeatDate))]
-namespace NeatLibrary.iOS
+[assembly:Dependency(typeof(StandardDate))]
+namespace FormStandard.iOS
 {
-	public class NeatDate : IDate
+	public class StandardDate : IDate
 	{
-		public NeatDate()
+		public StandardDate()
 		{
 		}
 		public static void Init()

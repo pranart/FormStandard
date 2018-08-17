@@ -1,11 +1,11 @@
 ﻿using System;
-using NeatLibrary.iOS;
+using FormStandard.iOS;
 using Xamarin.Forms;
 using Xamarin.Forms.Platform.iOS;
 
-[assembly: ResolutionGroupName("NeatLibrary")]
+[assembly: ResolutionGroupName("FormStandard")]
 [assembly: ExportEffect(typeof(LastPageEffect), "LastPageEffect")]
-namespace NeatLibrary.iOS
+namespace FormStandard.iOS
 {
     public class LastPageEffect : PlatformEffect
     {

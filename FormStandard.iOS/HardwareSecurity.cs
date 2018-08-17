@@ -1,11 +1,11 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.IO;
-using NeatLibrary.iOS;
+using FormStandard.iOS;
 using Xamarin.Forms;
 
 [assembly: Dependency(typeof(CheckHardware))]
-namespace NeatLibrary.iOS
+namespace FormStandard.iOS
 {
     public class CheckHardware : IHardwareSecurity
     {

@@ -1,23 +1,23 @@
 ﻿using System;
 using Xamarin.Forms.Platform.iOS;
 using UIKit;
-using NeatLibrary;
-using NeatLibrary.IOS;
+using FormStandard;
+using FormStandard.IOS;
 using Xamarin.Forms;
 using Foundation;
 
-[assembly:ExportRendererAttribute(typeof(PdfView),typeof(PdfViewRenderer))]
-namespace NeatLibrary.IOS
+[assembly:ExportRendererAttribute(typeof(StandardPdfView),typeof(StandardPdfViewRenderer))]
+namespace FormStandard.IOS
 {
-	public class PdfViewRenderer : ViewRenderer<PdfView,UIWebView>
+    public class StandardPdfViewRenderer : ViewRenderer<StandardPdfView,UIWebView>
 	{
-		public PdfViewRenderer ()
+        public StandardPdfViewRenderer ()
 		{
 		}
 
 		static public void Initialize() { }
 
-		protected override void OnElementChanged (ElementChangedEventArgs<PdfView> e)
+        protected override void OnElementChanged (ElementChangedEventArgs<StandardPdfView> e)
 		{
 			base.OnElementChanged (e);
 

@@ -1,8 +1,8 @@
 ﻿using Foundation;
 using Xamarin.Forms;
 
-[assembly: Dependency(typeof(NeatLibrary.iOS.AppVersion))]
-namespace NeatLibrary.iOS
+[assembly: Dependency(typeof(FormStandard.iOS.AppVersion))]
+namespace FormStandard.iOS
 {
     public class AppVersion : IAppVersion
     {

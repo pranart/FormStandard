@@ -1,18 +1,18 @@
-using System;
+﻿using System;
 using Xamarin.Forms.Platform.iOS;
 using Xamarin.Forms;
 using UIKit;
-using NeatLibrary;
-using NeatLibrary.iOS;
+using FormStandard;
+using FormStandard.iOS;
 using Xamarin.Forms.Internals;
 
-[assembly:ExportRenderer(typeof(NeatWebView),typeof(NeatWebViewRenderer))]
-namespace NeatLibrary.iOS
+[assembly:ExportRenderer(typeof(StandardWebView),typeof(StandardWebViewRenderer))]
+namespace FormStandard.iOS
 {
     [Preserve]
-	public class NeatWebViewRenderer : WebViewRenderer
+	public class StandardWebViewRenderer : WebViewRenderer
 	{
-		public NeatWebViewRenderer ()
+		public StandardWebViewRenderer ()
 		{
 		}
 		static public void Initialize() { }

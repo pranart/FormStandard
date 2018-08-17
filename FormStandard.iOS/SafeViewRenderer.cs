@@ -1,25 +1,25 @@
 ﻿using System;
 using UIKit;
-using NeatLibrary;
+using FormStandard;
 using Xamarin.Forms.Platform.iOS;
-using NeatLibrary.iOS;
+using FormStandard.iOS;
 using Xamarin.Forms;
 using CoreGraphics;
 
-[assembly: ExportRenderer(typeof(SafeView), typeof(SafeViewRenderer))]
-namespace NeatLibrary.iOS
+[assembly: ExportRenderer(typeof(StandardSafeView), typeof(StandardSafeViewRenderer))]
+namespace FormStandard.iOS
 {
-    public class SafeViewRenderer : ViewRenderer<SafeView, UIView>
+    public class StandardSafeViewRenderer : ViewRenderer<StandardSafeView, UIView>
     {
         public static void Init()
         {
         }
 
-        public SafeViewRenderer()
+        public StandardSafeViewRenderer()
         {
         }
 
-        protected override void OnElementChanged(ElementChangedEventArgs<SafeView> e)
+        protected override void OnElementChanged(ElementChangedEventArgs<StandardSafeView> e)
         {
             base.OnElementChanged(e);
 

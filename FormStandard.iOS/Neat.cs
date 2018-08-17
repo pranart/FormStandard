@@ -1,23 +1,23 @@
 ﻿using System;
-using NeatLibrary;
+using FormStandard;
 using Xamarin.Forms;
 
 
-namespace NeatLibrary.iOS
+namespace FormStandard.iOS
 {
-	public class Neat 
+	public class Standard 
 	{
 		public static void Initialize()
 		{
-			NeatEntryRenderer.Initialize();
-			NeatWebViewRenderer.Initialize();
-			NeatListViewRenderer.Initialize();
-			NeatViewCellRenderer.Initialize();
+			StandardEntryRenderer.Initialize();
+			StandardWebViewRenderer.Initialize();
+			StandardListViewRenderer.Initialize();
+			StandardViewCellRenderer.Initialize();
             HybridWebViewRenderer.Initialize();
 			FacebookLoginPageRenderer.Initialize();
 			InstagramLoginPageRenderer.Initialize();
-			NeatDate.Init();
-            SafeViewRenderer.Init();
+			StandardDate.Init();
+            StandardSafeViewRenderer.Init();
 
 		}
 	}

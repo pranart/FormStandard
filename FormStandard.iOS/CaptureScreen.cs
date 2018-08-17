@@ -1,12 +1,12 @@
 ﻿using System;
 using CoreGraphics;
-using NeatLibrary.iOS;
+using FormStandard.iOS;
 using UIKit;
 using Xamarin.Forms;
 using Foundation;
 
 [assembly:Dependency(typeof(CaptureScreen))]
-namespace NeatLibrary.iOS
+namespace FormStandard.iOS
 {
 	public class CaptureScreen : ICaptureScreen
 	{

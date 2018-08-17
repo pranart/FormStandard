@@ -1,21 +1,21 @@
-using Xamarin.Forms;
+﻿using Xamarin.Forms;
 using Xamarin.Forms.Platform.iOS;
 using UIKit;
 using CoreText;
 
-using NeatLibrary;
-using NeatLibrary.iOS;
+using FormStandard;
+using FormStandard.iOS;
 using Xamarin.Forms.Internals;
 using Foundation;
 using System;
 
-[assembly: ExportRenderer (typeof (NeatEntry), typeof (NeatEntryRenderer))]
-namespace NeatLibrary.iOS
+[assembly: ExportRenderer (typeof (StandardEntry), typeof (StandardEntryRenderer))]
+namespace FormStandard.iOS
 {
     [Xamarin.Forms.Internals.Preserve]
-	public class NeatEntryRenderer : EntryRenderer
+	public class StandardEntryRenderer : EntryRenderer
 	{
-		public NeatEntryRenderer ()
+		public StandardEntryRenderer ()
 		{
 		}
         static public void Initialize()
@@ -34,7 +34,7 @@ namespace NeatLibrary.iOS
 			//Control.SetPadding (0,0,0,0);
 			try
 			{
-				var bareEntry = (Element as NeatEntry);
+				var bareEntry = (Element as StandardEntry);
 				try
 				{
 					Control.Font = UIFont.SystemFontOfSize((nfloat)bareEntry.TextSize*5.0f);
@@ -43,7 +43,7 @@ namespace NeatLibrary.iOS
                 {
 				}
 				//Control.BorderStyle = UITextBorderStyle.None;
-                if ((Element as NeatEntry).HasFrame)
+                if ((Element as StandardEntry).HasFrame)
                 {
                     this.Control.Layer.BorderColor = UIColor.LightGray.CGColor;
                 }
@@ -66,7 +66,7 @@ namespace NeatLibrary.iOS
 		{
 			base.OnElementPropertyChanged (sender, e);
 
-            if ((Element as NeatEntry).HasFrame)
+            if ((Element as StandardEntry).HasFrame)
             {
                 Control.BorderStyle = UITextBorderStyle.RoundedRect;
             }

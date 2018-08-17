@@ -8,7 +8,7 @@ using Foundation;
 using System.Threading.Tasks;
 using CoreGraphics;
 
-namespace NeatLibrary.iOS
+namespace FormStandard.iOS
 {
 	public class AssetResult
 	{

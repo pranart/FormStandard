@@ -1,28 +1,28 @@
-using System;
+﻿using System;
 using Xamarin.Forms;
 
 using Xamarin.Forms.Platform.iOS;
 
 
 using UIKit;
-using NeatLibrary;
-using NeatLibrary.iOS;
+using FormStandard;
+using FormStandard.iOS;
 using Xamarin.Forms.Internals;
 
-[assembly: ExportRenderer (typeof (NeatViewCell), typeof (NeatViewCellRenderer))]
-namespace NeatLibrary.iOS
+[assembly: ExportRenderer (typeof (StandardViewCell), typeof (StandardViewCellRenderer))]
+namespace FormStandard.iOS
 {
     [Preserve]
-	public class NeatViewCellRenderer : ViewCellRenderer
+	public class StandardViewCellRenderer : ViewCellRenderer
 	{
 		static public void Initialize() { }
-		public NeatViewCellRenderer () { }
+		public StandardViewCellRenderer () { }
 		public override UITableViewCell GetCell (Cell item, UITableViewCell reusableCell, UITableView tv)
 		{
 			try
 			{
 				var cell = base.GetCell(item,reusableCell, tv);
-				var view = item as NeatViewCell;
+				var view = item as StandardViewCell;
 
 				if (cell != null)
 				{

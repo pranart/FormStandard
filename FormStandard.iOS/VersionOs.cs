@@ -1,10 +1,10 @@
 ﻿using System;
 using Foundation;
-using NeatLibrary;
-using NeatLibrary.iOS;
+using FormStandard;
+using FormStandard.iOS;
 using Xamarin.Forms;
 [assembly:Dependency(typeof(VersionOs))]
-namespace NeatLibrary.iOS
+namespace FormStandard.iOS
 {
     public class VersionOs : IVersionOs
     {

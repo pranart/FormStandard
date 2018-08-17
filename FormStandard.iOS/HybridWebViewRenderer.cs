@@ -1,15 +1,15 @@
-using System;
+﻿using System;
 using Xamarin.Forms;
 using Xamarin.Forms.Platform.iOS;
-using NeatLibrary;
-using NeatLibrary.iOS;
+using FormStandard;
+using FormStandard.iOS;
 using WebKit;
 using System.IO;
 using Foundation;
 using Reachability;
 
 [assembly: ExportRenderer(typeof(HybridWebView), typeof(HybridWebViewRenderer))]
-namespace NeatLibrary.iOS
+namespace FormStandard.iOS
 {
 	public class HybridWebViewRenderer : ViewRenderer<HybridWebView, WKWebView>, IWKScriptMessageHandler
 	{
