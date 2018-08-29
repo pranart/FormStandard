@@ -93,6 +93,8 @@
     <Compile Include="SafeViewRenderer.cs" />
     <Compile Include="Toast.cs" />
     <Compile Include="VersionOs.cs" />
+    <Compile Include="Thai.cs" />
+    <Compile Include="Location.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="NeatLabelRenderer.cs" />

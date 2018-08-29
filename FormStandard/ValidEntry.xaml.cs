@@ -25,7 +25,20 @@ namespace FormStandard
 
             }
         }
-
+        public static readonly BindableProperty MaxLengthProperty =
+            BindableProperty.Create(nameof(MaxLengthProperty), typeof(int), typeof(ValidEntry), int.MaxValue, BindingMode.Default, null, (bindable, oldValue, newValue) =>
+            {
+                var entry = bindable as ValidEntry;
+                if (entry?.Entry != null)
+                {
+                   entry.Entry.MaxLength = (int)newValue;
+                }
+            });
+        public int MaxLength
+        {
+            get { return (int)GetValue(MaxLengthProperty); }
+            set { SetValue(MaxLengthProperty, value); }
+        }
         //public static readonly BindableProperty HasFrameProperty =
         //  BindableProperty.Create(nameof(HasFrameProperty), typeof(bool), typeof(StandardEntry), false, BindingMode.Default,null,(bindable, oldValue, newValue) => 
         //{
