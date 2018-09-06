@@ -1,4 +1,5 @@
 ﻿using System;
+using Android.Content;
 using Android.Locations;
 using Xamarin.Forms;
 
@@ -10,7 +11,7 @@ namespace FormStandard.Droid
         LocationManager LocationManager { get; set; }
         public Location()
         {
-            LocationManager = (LocationManager)Forms.Context.GetSystemService(Forms.Context.LocationService);
+            LocationManager = (LocationManager)(Forms.Context.GetSystemService(Context.LocationService));
 
         }
 

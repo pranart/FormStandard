@@ -1,20 +1,33 @@
-﻿using Xamarin.Forms;
-using FormStandard;
-using FormStandard.Droid;
+using Xamarin.Forms;
+using StandardLibrary;
+using StandardLibrary.Droid;
 using Xamarin.Forms.Platform.Android;
 using Android.Widget;
 using Android.Util;
 using Android.Graphics;
 using System;
+using FormStandard.Shared;
+using Android.Content;
 
 [assembly: ExportRenderer(typeof(StandardLabel), typeof(StandardLabelRenderer))]
 namespace FormStandard.Droid
 {
-    public class StandardLabelRenderer : LabelRenderer {
+    public class StandardLabelRenderer : LabelRenderer 
+	{
+        public Context FormsContext { get; set; }
+
+        public StandardLabelRenderer(Context context) : base(context)
+        {
+            FormsContext = context;
+        }
 		protected override void OnElementChanged (ElementChangedEventArgs<Label> e) {
 			base.OnElementChanged(e);
+			var control = new ThaiLineBreakingTextView(FormsContext);
+            
+			SetNativeControl(control);
 			Recreate ();
 		}
+       
 		private void Recreate()
 		{
 			StandardLabel customLabel = Element as StandardLabel;
@@ -27,7 +40,7 @@ namespace FormStandard.Droid
 			{
                 if(!string.IsNullOrEmpty(Element?.StyleId))
                 {
-                    Typeface font = Typeface.CreateFromAsset(Forms.Context.Assets, Element?.StyleId+".ttf");
+                    Typeface font = Typeface.CreateFromAsset(FormsContext.Assets, Element?.StyleId+".ttf");
                     label.Typeface = font;
                 }
 
@@ -36,26 +49,26 @@ namespace FormStandard.Droid
             {
                 System.Diagnostics.Debug.WriteLine(exc.ToString());
 			}
-			//if (customLabel.Text != null)
-			//{
-			//	if (customLabel.Text.Length > customLabel.LineLimit - 2)
-			//	{
-			//		customLabel.Text = customLabel.Text.Substring (0, customLabel.LineLimit - 2) + "..";
-			//	}
-			//}
 			label.SetTextSize (ComplexUnitType.Dip,(float)fontSize);
 		}
 
 		protected override void OnElementPropertyChanged (object sender, System.ComponentModel.PropertyChangedEventArgs e)
 		{
+			if(e.PropertyName == "Text" || e.PropertyName=="Renderer")
+			{
+				(Control as ThaiLineBreakingTextView).SetText2 (Element.Text);			   
+			}
 			base.OnElementPropertyChanged (sender, e);
 
-
-			if (e.PropertyName == "FontSize" || e.PropertyName == "Text" || e.PropertyName=="LineLimit"
-               || e.PropertyName == "IsBold") 
+			switch(e.PropertyName)
 			{
-				Recreate ();
-				this.Invalidate ();
+				case "FontSize":
+				case "LineLimit":
+				case "IsBold":
+    				Recreate ();
+                    (Control as ThaiLineBreakingTextView).SetText2(Element.Text);
+    				this.Invalidate ();
+					break;
 			}
 		}
 	}

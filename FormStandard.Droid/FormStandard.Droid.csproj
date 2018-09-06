@@ -138,11 +138,21 @@
     <Compile Include="VersionOs.cs" />
     <Compile Include="Thai.cs" />
     <Compile Include="Location.cs" />
+    <Compile Include="ThaiLineBreakingTextView.cs" />
+    <Compile Include="ThaiLineBreaker\engine\LineBreaker.cs" />
+    <Compile Include="ThaiLineBreaker\engine\THSplit.cs" />
+    <Compile Include="ThaiLineBreaker\engine\WordPosition.cs" />
+    <Compile Include="ThaiLineBreaker\Interface\ITextViewReplacementMethod.cs" />
+    <Compile Include="ThaiLineBreaker\Interface\IThaiLineBreaker.cs" />
+    <Compile Include="ThaiLineBreaker\util\ThaiUtil.cs" />
+    <Compile Include="ThaiLineBreaker\util\Util.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="Resources\AboutResources.txt" />
     <None Include="NeatLabelRenderer.cs" />
     <None Include="packages.config" />
+    <None Include="ThaiLineBreaker\BackgroundCut.cs" />
+    <None Include="ThaiLineBreaker\util\FileUtil.cs" />
   </ItemGroup>
   <ItemGroup>
     <AndroidResource Include="Resources\values\Strings.xml" />
@@ -156,6 +166,7 @@
   </ItemGroup>
   <ItemGroup>
     <Folder Include="Resources\drawable\" />
+    <Folder Include="ThaiLineBreaker\" />
   </ItemGroup>
   <ItemGroup>
     <ProjectReference Include="..\FormStandard\FormStandard.csproj">
@@ -168,8 +179,11 @@
     </ProjectReference>
     <ProjectReference Include="..\FormTest\FormTest.Droid\FormTest.Droid.csproj">
       <Project>{4A88779B-390A-4CE2-8186-6E2B96F02801}</Project>
-      <Name>FormTest.Droid</Name>
+      <Name>FormsTest.Droid</Name>
     </ProjectReference>
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="dictionary.txt" />
   </ItemGroup>
   <Import Project="$(MSBuildExtensionsPath)\Xamarin\Android\Xamarin.Android.CSharp.targets" />
   <Import Project="..\..\packages\Xamarin.Android.Support.Compat.25.4.0.2\build\MonoAndroid70\Xamarin.Android.Support.Compat.targets" Condition="Exists('..\..\packages\Xamarin.Android.Support.Compat.25.4.0.2\build\MonoAndroid70\Xamarin.Android.Support.Compat.targets')" />

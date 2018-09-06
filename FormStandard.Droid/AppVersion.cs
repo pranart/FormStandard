@@ -1,7 +1,9 @@
 ﻿using System;
 using FormStandard.Droid;
 using Xamarin.Forms;
+using Xamarin.Forms.Internals;
 
+[assembly: Preserve]
 [assembly:Dependency(typeof(AppVersion))]
 namespace FormStandard.Droid
 {

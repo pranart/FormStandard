@@ -1,6 +1,6 @@
 ﻿using Foundation;
 using Xamarin.Forms;
-
+[assembly: Preserve]
 [assembly: Dependency(typeof(FormStandard.iOS.AppVersion))]
 namespace FormStandard.iOS
 {
