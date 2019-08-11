@@ -18,7 +18,10 @@ namespace FormStandard.iOS
 			InstagramLoginPageRenderer.Initialize();
 			StandardDate.Init();
             StandardSafeViewRenderer.Init();
+            StandardFrameRenderer.Initialize();
+            StandardLabelRenderer.Initialize();
 
-		}
+
+        }
 	}
 }

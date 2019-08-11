@@ -26,8 +26,9 @@ namespace FormStandard.iOS
 
 		{
 			base.OnElementChanged(e);
+            Recreate();
 
-		}
+        }
 		void Recreate()
 		{
 			if (this.Control == null) return;

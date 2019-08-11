@@ -1,30 +1,29 @@
 using Xamarin.Forms;
-using StandardLibrary;
-using StandardLibrary.Droid;
 using Xamarin.Forms.Platform.Android;
 using Android.Widget;
 using Android.Util;
 using Android.Graphics;
+using FormStandard;
 using System;
 using FormStandard.Shared;
 using Android.Content;
 
-[assembly: ExportRenderer(typeof(StandardLabel), typeof(StandardLabelRenderer))]
+[assembly: ExportRenderer(typeof(StandardLabel), typeof(FormStandard.Droid.StandardLabelRenderer))]
 namespace FormStandard.Droid
 {
     public class StandardLabelRenderer : LabelRenderer 
 	{
         public Context FormsContext { get; set; }
-
+        public static void Initialize() { }
         public StandardLabelRenderer(Context context) : base(context)
         {
             FormsContext = context;
         }
 		protected override void OnElementChanged (ElementChangedEventArgs<Label> e) {
 			base.OnElementChanged(e);
-			var control = new ThaiLineBreakingTextView(FormsContext);
+			//var control = new ThaiLineBreakingTextView(FormsContext);
             
-			SetNativeControl(control);
+			//SetNativeControl(control);
 			Recreate ();
 		}
        
@@ -56,7 +55,7 @@ namespace FormStandard.Droid
 		{
 			if(e.PropertyName == "Text" || e.PropertyName=="Renderer")
 			{
-				(Control as ThaiLineBreakingTextView).SetText2 (Element.Text);			   
+				//(Control as ThaiLineBreakingTextView).SetText2 (Element.Text);			   
 			}
 			base.OnElementPropertyChanged (sender, e);
 
@@ -66,7 +65,7 @@ namespace FormStandard.Droid
 				case "LineLimit":
 				case "IsBold":
     				Recreate ();
-                    (Control as ThaiLineBreakingTextView).SetText2(Element.Text);
+                    //(Control as ThaiLineBreakingTextView).SetText2(Element.Text);
     				this.Invalidate ();
 					break;
 			}

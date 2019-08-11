@@ -79,8 +79,8 @@ namespace FormStandard
             FontSmall = Standard.Font((Device.RuntimePlatform == Device.iOS) ? Device.GetNamedSize(NamedSize.Micro, typeof(Label)) : Device.GetNamedSize(NamedSize.Small, typeof(Label)));
             FontDefault = Standard.Font((Device.RuntimePlatform == Device.iOS) ? Device.GetNamedSize(NamedSize.Small, typeof(Label)) : Device.GetNamedSize(NamedSize.Default, typeof(Label)));
             FontMedium = Standard.Font((Device.RuntimePlatform == Device.iOS) ? Device.GetNamedSize(NamedSize.Default, typeof(Label)) : Device.GetNamedSize(NamedSize.Medium, typeof(Label)));
-            FontLarge = Standard.Font((Device.RuntimePlatform == Device.iOS) ? Device.GetNamedSize(NamedSize.Medium, typeof(Label)) : Device.GetNamedSize(NamedSize.Large, typeof(Label)));
-            FontLarger = Standard.Font((Device.RuntimePlatform == Device.iOS) ? Device.GetNamedSize(NamedSize.Large, typeof(Label)) : Device.GetNamedSize(NamedSize.Large, typeof(Label)) * 1.1);
+            FontLarge = Standard.Font((Device.RuntimePlatform == Device.iOS) ? Device.GetNamedSize(NamedSize.Medium, typeof(Label)) : Device.GetNamedSize(NamedSize.Medium, typeof(Label)));
+            FontLarger = Standard.Font((Device.RuntimePlatform == Device.iOS) ? Device.GetNamedSize(NamedSize.Large, typeof(Label)) : Device.GetNamedSize(NamedSize.Large, typeof(Label)));
 			FontBig = Standard.Font((FontLarge + FontMedium) / 2);
             FontLargest = Standard.Font((Device.RuntimePlatform == Device.iOS) ? Device.GetNamedSize(NamedSize.Large, typeof(Label)) * 1.1 : Device.GetNamedSize(NamedSize.Large, typeof(Label)) * 1.2);
             FontHuge = Standard.Font((Device.RuntimePlatform == Device.iOS) ? Device.GetNamedSize(NamedSize.Large, typeof(Label)) * 1.2 : Device.GetNamedSize(NamedSize.Large, typeof(Label)) * 1.3);

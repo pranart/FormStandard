@@ -3,7 +3,7 @@ namespace FormStandard.Droid
 {
 	public static class Standard
 	{
-		static public void Initialize()
+        static public void Initialize()
 		{
 			//PdfViewRenderer.Initialize();
 			StandardEntryRenderer.Initialize();
@@ -16,6 +16,8 @@ namespace FormStandard.Droid
 			StandardDate.Initialize();
             StandardEditorRenderer.Initialize();
 			StandardViewCellRenderer.Initialize();
+            StandardLabelRenderer.Initialize();
+            
             //BottomBarPageRenderer.Initialize();
 		}
 	}

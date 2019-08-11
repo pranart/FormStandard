@@ -7,14 +7,16 @@ namespace FormStandard
 	{
 		public StandardFrame ()
 		{
-			this.BorderColor = Color.Transparent;
-			this.HasShadow = false;
+			this.BorderColor = Color.LightGray;
+            
+			//this.HasShadow = false;
 
 			this.HorizontalOptions = LayoutOptions.Fill;
 			this.VerticalOptions = LayoutOptions.Fill;
-			this.BackgroundColor = Color.Transparent;
-			Padding = new Thickness(5);
+			//this.BackgroundColor = Color.Transparent;
+			//Padding = new Thickness(5);
 		}
 	}
+   
 }
 

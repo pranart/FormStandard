@@ -36,7 +36,7 @@ namespace FormStandard.iOS
 			if (customLabel == null ) return;
 
 			UILabel label = Control as UILabel;
-            label.
+            
 			//string typeface = customLabel.CustomTypeFace;
 			nfloat size = (nfloat)fontSize;
 			try
