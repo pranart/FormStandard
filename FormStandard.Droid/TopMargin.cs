@@ -14,7 +14,7 @@ namespace FormStandard.Droid
 
         public int GetTopMargin()
         {
-            return 0;
+            return 10;
         }
     }
 }
