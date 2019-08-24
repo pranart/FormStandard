@@ -18,7 +18,7 @@ namespace FormStandard.iOS
         {
             var margin = (int)UIApplication.SharedApplication?.KeyWindow?.SafeAreaInsets.Top;
             if (margin == 0) margin = 20;
-            else margin -= 20;
+
             return margin;
                
         }
