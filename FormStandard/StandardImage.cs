@@ -28,6 +28,14 @@ namespace FormStandard
 			get { return (Command)GetValue(PanCommandProperty); }
 			set { SetValue(PanCommandProperty, value); }
 		}
-	}
+
+        public static readonly BindableProperty TagProperty =
+            BindableProperty.Create(nameof(TagProperty), typeof(object), typeof(StandardImage), null, BindingMode.Default);
+        public object Tag
+        {
+            get { return (object)GetValue(TagProperty); }
+            set { SetValue(TagProperty, value); }
+        }
+    }
 }
 
