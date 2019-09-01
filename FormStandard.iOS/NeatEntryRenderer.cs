@@ -69,12 +69,12 @@ namespace FormStandard.iOS
 
             if ((Element as StandardEntry).HasFrame)
             {
-                Control.BorderStyle = UITextBorderStyle.RoundedRect;
+                if (Control != null) Control.BorderStyle = UITextBorderStyle.RoundedRect;
             }
             else
             {
                 //Control.Layer.BorderWidth = 0;
-                Control.BorderStyle = UITextBorderStyle.None;
+                if(Control !=null) Control.BorderStyle = UITextBorderStyle.None;
             }
 		}
 
