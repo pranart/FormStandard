@@ -11,12 +11,14 @@ namespace FormStandard.iOS
     {
         public TopMargin()
         {
-            int x = 0;
+
         }
 
         public int GetTopMargin()
         {
-            var margin = (int)UIApplication.SharedApplication?.KeyWindow?.SafeAreaInsets.Top;
+            var KeyWindow = UIApplication.SharedApplication?.KeyWindow;
+            if (KeyWindow == null) return 20;
+            var margin = (int)KeyWindow.SafeAreaInsets.Top;
             if (margin == 0) margin = 20;
 
             return margin;
