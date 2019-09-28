@@ -17,7 +17,7 @@ namespace FormStandard.Droid
             StandardEditorRenderer.Initialize();
 			StandardViewCellRenderer.Initialize();
             StandardLabelRenderer.Initialize();
-            
+            BorderlessPickerRenderer.Init();
             //BottomBarPageRenderer.Initialize();
 		}
 	}

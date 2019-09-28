@@ -214,6 +214,7 @@
     <Compile Include="ThaiLineBreaker\util\Util.cs" />
     <Compile Include="TopMargin.cs" />
     <Compile Include="NeatLabelRenderer.cs" />
+    <Compile Include="BorderlessPickerRenderer.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="Resources\AboutResources.txt" />

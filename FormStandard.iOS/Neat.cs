@@ -20,7 +20,7 @@ namespace FormStandard.iOS
             StandardSafeViewRenderer.Init();
             StandardFrameRenderer.Initialize();
             StandardLabelRenderer.Initialize();
-
+            BorderlessPickerRenderer.Init();
 
         }
 	}
