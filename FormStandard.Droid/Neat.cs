@@ -1,4 +1,9 @@
 ﻿using System;
+using Android.Content.PM;
+using Android.Util;
+using Java.Security;
+
+
 namespace FormStandard.Droid
 {
 	public static class Standard
@@ -20,5 +25,30 @@ namespace FormStandard.Droid
             BorderlessPickerRenderer.Init();
             //BottomBarPageRenderer.Initialize();
 		}
+        public static void GetHashFacebook()
+        {
+            try
+            {
+                PackageInfo info = PackageManager.GetPackageInfo(
+                            "th.in.xamarin.muka",
+                            PackageInfoFlags.Signatures);
+                foreach (Android.Content.PM.Signature signature in info.Signatures)
+                {
+                    MessageDigest md = MessageDigest.GetInstance("SHA");
+                    md.Update(signature.ToByteArray());
+                    byte[] ba = md.Digest();
+                    var result = Base64.EncodeToString(ba, Base64Flags.Default);
+                    System.Diagnostics.Debug.WriteLine(result);
+                }
+            }
+            catch (NameNotFoundException e)
+            {
+
+            }
+            catch (NoSuchAlgorithmException e)
+            {
+
+            }
+        }
 	}
 }
