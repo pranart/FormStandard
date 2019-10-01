@@ -25,7 +25,7 @@ namespace FormStandard.Droid
             BorderlessPickerRenderer.Init();
             //BottomBarPageRenderer.Initialize();
 		}
-        public static void GetHashFacebook()
+        /*public static void GetHashFacebook()
         {
             try
             {
@@ -41,7 +41,7 @@ namespace FormStandard.Droid
                     System.Diagnostics.Debug.WriteLine(result);
                 }
             }
-            catch (NameNotFoundException e)
+            catch (PackageManager.NameNotFoundException e)
             {
 
             }
@@ -49,6 +49,6 @@ namespace FormStandard.Droid
             {
 
             }
-        }
+        }*/
 	}
 }
