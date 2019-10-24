@@ -10,7 +10,6 @@ namespace FormStandard.iOS
 		public static void Initialize()
 		{
 			StandardEntryRenderer.Initialize();
-			StandardWebViewRenderer.Initialize();
 			StandardListViewRenderer.Initialize();
 			StandardViewCellRenderer.Initialize();
             HybridWebViewRenderer.Initialize();

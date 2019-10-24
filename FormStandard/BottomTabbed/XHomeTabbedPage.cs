@@ -32,7 +32,7 @@ namespace FormStandard
 
             //#region them and color
 
-            //BarBackgroundColor = Color.FromHex("#f3f3f3");
+            //BarBackgroundColor = Color.FromHex("#f5fafc");
             //BarTextColor = Color.Blue;
 
             //#endregion

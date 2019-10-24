@@ -13,7 +13,7 @@ namespace FormStandard.Droid
 			//PdfViewRenderer.Initialize();
 			StandardEntryRenderer.Initialize();
 			StandardPickerRenderer.Initialize();
-			StandardWebViewRenderer.Initialize();
+			
 			HybridWebViewRenderer.Initialize();
 			StandardNavigationRenderer.Initialize();
 			FacebookLoginPageRenderer.Initialize();
