@@ -60,6 +60,7 @@ namespace FormStandard
         static public double FontSmallest;
 
         static public double FontSmall;//= Standard.Font((Device.OS == TargetPlatform.iOS) ? Device.GetNamedSize(NamedSize.Micro, typeof(Label)) : Device.GetNamedSize(NamedSize.Small, typeof(Label)));
+        static public double FontMiddle;
         static public double FontDefault;// = Standard.Font((Device.OS == TargetPlatform.iOS) ? Device.GetNamedSize(NamedSize.Small, typeof(Label)) : Device.GetNamedSize(NamedSize.Default, typeof(Label)));
         static public double FontMedium;// = Standard.Font((Device.OS == TargetPlatform.iOS) ? Device.GetNamedSize(NamedSize.Default, typeof(Label)) : Device.GetNamedSize(NamedSize.Medium, typeof(Label)));
         static public double FontLarge;// = Standard.Font((Device.OS == TargetPlatform.iOS) ? Device.GetNamedSize(NamedSize.Medium, typeof(Label)) : Device.GetNamedSize(NamedSize.Large, typeof(Label)));
@@ -87,6 +88,7 @@ namespace FormStandard
             FontHuge = Standard.Font((Device.RuntimePlatform == Device.iOS) ? Device.GetNamedSize(NamedSize.Large, typeof(Label)) * 1.2 : Device.GetNamedSize(NamedSize.Large, typeof(Label)) * 0.9);
             FontHuger = Standard.Font((Device.RuntimePlatform == Device.iOS) ? Device.GetNamedSize(NamedSize.Large, typeof(Label)) * 1.3 : Device.GetNamedSize(NamedSize.Large, typeof(Label)) * 0.95);
             FontHugest = Standard.Font((Device.RuntimePlatform == Device.iOS) ? Device.GetNamedSize(NamedSize.Large, typeof(Label)) * 1.4 : Device.GetNamedSize(NamedSize.Large, typeof(Label)) * 1.0);
+            FontMiddle = (FontSmall + FontMedium) / 1.7;
         }
 
         public static double RadianFromDegree(double degree)

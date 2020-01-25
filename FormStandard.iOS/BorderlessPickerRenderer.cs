@@ -11,7 +11,9 @@ namespace FormStandard.iOS
 {   
     public class BorderlessPickerRenderer : PickerRenderer
     {
-        public static void Init() { }
+        public static void Init()
+        {
+        }
         protected override void OnElementPropertyChanged(object sender, PropertyChangedEventArgs e)
         {
             base.OnElementPropertyChanged(sender, e);
