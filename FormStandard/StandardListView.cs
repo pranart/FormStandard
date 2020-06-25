@@ -3,7 +3,7 @@ using Xamarin.Forms;
 
 namespace FormStandard
 {
-    public class StandardListView : FormTest.ListView
+    public class StandardListView : ListView
 	{
 		public StandardListView()
 		{

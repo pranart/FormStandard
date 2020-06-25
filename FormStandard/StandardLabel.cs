@@ -3,7 +3,7 @@ using Xamarin.Forms;
 
 namespace FormStandard
 {
-    public class StandardLabel : FormTest.Label
+    public class StandardLabel : Label
 	{
 		public StandardLabel ()
 		{

@@ -61,7 +61,7 @@ namespace FormStandard.Droid
 		}
 
 		[JavascriptInterface]
-		[Export("invokeAction")]
+		//[Export("invokeAction")]
 		public void InvokeAction(string data)
 		{
 			HybridWebViewRenderer hybridRenderer;

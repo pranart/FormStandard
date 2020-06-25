@@ -1,13 +1,10 @@
-﻿using System;
-using Android.Graphics.Drawables;
-using Android.Support.V4.Content;
-using Android.Util;
+﻿using Android.Graphics.Drawables;
 using FormStandard;
 using FormStandard.Droid;
 using Xamarin.Forms;
 using Xamarin.Forms.Platform.Android;
 
-[assembly: ExportRenderer(typeof(StandardEditor),typeof(StandardEditorRenderer))]
+[assembly: ExportRenderer(typeof(StandardEditor), typeof(StandardEditorRenderer))]
 namespace FormStandard.Droid
 {
     public class StandardEditorRenderer : EditorRenderer

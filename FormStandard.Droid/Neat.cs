@@ -1,6 +1,7 @@
 ﻿using System;
 using Android.Content.PM;
 using Android.Util;
+using FFImageLoading.Forms.Platform;
 using Java.Security;
 
 
@@ -16,14 +17,15 @@ namespace FormStandard.Droid
 			
 			HybridWebViewRenderer.Initialize();
 			StandardNavigationRenderer.Initialize();
-			FacebookLoginPageRenderer.Initialize();
-			InstagramLoginPageRenderer.Initialize();
+			//FacebookLoginPageRenderer.Initialize();
+			//InstagramLoginPageRenderer.Initialize();
 			StandardDate.Initialize();
             StandardEditorRenderer.Initialize();
 			StandardViewCellRenderer.Initialize();
             StandardLabelRenderer.Initialize();
             BorderlessPickerRenderer.Init();
             //BottomBarPageRenderer.Initialize();
+            CachedImageRenderer.Init(true);
 		}
         /*public static void GetHashFacebook()
         {

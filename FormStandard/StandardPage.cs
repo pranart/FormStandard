@@ -4,7 +4,7 @@ using Xamarin.Forms;
 
 namespace FormStandard
 {
-    public class StandardPage : FormTest.Page
+    public class StandardPage : Page
 	{
 		public StandardPage ()
 		{

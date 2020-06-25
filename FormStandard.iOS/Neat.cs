@@ -1,11 +1,9 @@
-﻿using System;
-using FormStandard;
-using Xamarin.Forms;
+﻿using FFImageLoading.Forms.Platform;
 
 
 namespace FormStandard.iOS
 {
-	public class Standard 
+    public class Standard 
 	{
 		public static void Initialize()
 		{
@@ -13,13 +11,14 @@ namespace FormStandard.iOS
 			StandardListViewRenderer.Initialize();
 			StandardViewCellRenderer.Initialize();
             HybridWebViewRenderer.Initialize();
-			FacebookLoginPageRenderer.Initialize();
-			InstagramLoginPageRenderer.Initialize();
+			//FacebookLoginPageRenderer.Initialize();
+			//InstagramLoginPageRenderer.Initialize();
 			StandardDate.Init();
             StandardSafeViewRenderer.Init();
             StandardFrameRenderer.Initialize();
             StandardLabelRenderer.Initialize();
             BorderlessPickerRenderer.Init();
+			CachedImageRenderer.Init();
 
         }
 	}

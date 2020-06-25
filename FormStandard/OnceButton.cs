@@ -1,10 +1,9 @@
 ﻿using System;
-using FormTest;
 using Xamarin.Forms;
 
 namespace FormStandard
 {
-    public class OnceButton : FormTest.Button
+    public class OnceButton : Button
     {
         public OnceButton()
         {

@@ -1,7 +1,7 @@
 ﻿using Xamarin.Forms;
 namespace FormStandard
 {
-    public class StandardBox : FormTest.BoxView
+    public class StandardBox : BoxView
     {
 		public StandardBox ()
 		{

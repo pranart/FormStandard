@@ -3,7 +3,7 @@ using Xamarin.Forms;
 
 namespace FormStandard
 {
-    public class StandardEditor : FormTest.Editor
+    public class StandardEditor : Editor
 	{
         public static readonly BindableProperty HasFrameProperty =
             BindableProperty.Create(nameof(HasFrameProperty), typeof(bool), typeof(StandardEditor), false, BindingMode.Default);

@@ -3,7 +3,7 @@ using Xamarin.Forms;
 
 namespace FormStandard
 {
-    public class StandardLoading : FormTest.ActivityIndicator
+    public class StandardLoading : ActivityIndicator
 	{
 		public StandardLoading ()
 		{

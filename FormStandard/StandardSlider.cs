@@ -3,7 +3,7 @@ using Xamarin.Forms;
 
 namespace FormStandard
 {
-    public class StandardSlider : FormTest.Slider
+    public class StandardSlider : Slider
 	{
 		public StandardSlider()
 		{

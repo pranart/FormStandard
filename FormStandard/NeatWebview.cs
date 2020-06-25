@@ -3,7 +3,7 @@ using Xamarin.Forms;
 
 namespace FormStandard
 {
-    public class StandardWebView : FormTest.WebView 
+    public class StandardWebView : WebView 
 	{
 		public StandardWebView ()
 		{

@@ -1,10 +1,11 @@
 ﻿using System;
+using FFImageLoading.Forms;
 using Xamarin.Forms;
 
 
 namespace FormStandard
 {
-    public class StandardImage : FormTest.Image
+    public class StandardImage : CachedImage
 	{
 		public StandardImage()
 		{

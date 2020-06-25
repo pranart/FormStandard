@@ -3,7 +3,7 @@ using Xamarin.Forms;
 
 namespace FormStandard
 {
-    public class StandardPicker : FormTest.Picker
+    public class StandardPicker : Picker
 	{
 		public StandardPicker()
 		{
