@@ -5,6 +5,7 @@ using Xamarin.Forms.Platform.Android;
 using FormStandard.Droid;
 using Android.Util;
 using Android.Graphics.Drawables;
+using Android.Content.Res;
 
 [assembly: ExportRenderer (typeof (StandardEntry), typeof (StandardEntryRenderer))]
 namespace FormStandard.Droid
@@ -28,7 +29,7 @@ namespace FormStandard.Droid
 			if (this.Control == null) return;
 			Control.SetPadding (0,0,0,0);
 
-            Control.SetHintTextColor (Color.Gray.ToAndroid ());
+            Control.SetHintTextColor ((Element as StandardEntry).PlaceholderColor.ToAndroid());
             Control.SetTextSize (ComplexUnitType.Mm,(float)(Element as StandardEntry).TextSize);
             UpdateBorders();
 
@@ -37,20 +38,23 @@ namespace FormStandard.Droid
 		{
 			base.OnElementPropertyChanged (sender, e);
 
-			if (e.PropertyName == "TextSize") 
+			if (e.PropertyName == StandardEntry.TextColorProperty.PropertyName
+				|| e.PropertyName == StandardEntry.PlaceholderColorProperty.PropertyName
+				|| e.PropertyName == StandardEntry.PlaceholderProperty.PropertyName) 
 			{
 				Recreate ();
                 UpdateBorders();
 				this.Invalidate ();
 			}
-            else if(e.PropertyName == StandardEntry.IsBorderErrorVisibleProperty.PropertyName
+            if(e.PropertyName == StandardEntry.IsBorderErrorVisibleProperty.PropertyName
                     || e.PropertyName == StandardEntry.HasFrameProperty.PropertyName)
             {
                 UpdateBorders();
             }
 
+
 		}
-        void UpdateBorders()
+		void UpdateBorders()
         {
             GradientDrawable shape = new GradientDrawable();
             shape.SetShape(ShapeType.Rectangle);

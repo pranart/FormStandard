@@ -10,6 +10,7 @@ namespace FormStandard
 			VerticalOptions = LayoutOptions.Center;
 			HorizontalOptions = LayoutOptions.Fill;
 			FontSize = Device.GetNamedSize(NamedSize.Medium, this);
+			PlaceholderColor = Color.Gray;
 			TextColor = Color.Black;
 			this.Completed += Handle_Completed;
 			this.TextChanged += Handle_TextChanged;

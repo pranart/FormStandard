@@ -14,6 +14,10 @@ namespace FormStandard.Droid
 
         public int GetTopMargin()
         {
+            if(Android.OS.Build.VERSION.SdkInt >= Android.OS.BuildVersionCodes.P)
+            {
+                return 70;
+            }
             return 20;
         }
     }

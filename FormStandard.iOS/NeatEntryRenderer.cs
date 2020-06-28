@@ -35,48 +35,58 @@ namespace FormStandard.iOS
 			//Control.SetPadding (0,0,0,0);
 			try
 			{
-				var bareEntry = (Element as StandardEntry);
+				var element = (Element as StandardEntry);
 				try
 				{
-					Control.Font = UIFont.SystemFontOfSize((nfloat)bareEntry.TextSize*5.0f);
+                    Control.Font = UIFont.SystemFontOfSize((nfloat)element.FontSize * 1.0f);
 				}
                 catch
                 {
 				}
 				//Control.BorderStyle = UITextBorderStyle.None;
-                if ((Element as StandardEntry).HasFrame)
+                if (element.HasFrame)
                 {
                     this.Control.Layer.BorderColor = UIColor.LightGray.CGColor;
+					this.Control.BorderStyle = UITextBorderStyle.RoundedRect;
                 }
                 else
                 {
                     Control.Layer.BorderColor = Color.Transparent.ToCGColor();
+					Control.BorderStyle = UITextBorderStyle.None;
                 }
 
-				Control.TextColor = bareEntry.TextColor.ToUIColor();
-				var s = new NSMutableAttributedString (bareEntry.Placeholder);
-				s.AddAttribute (UIStringAttributeKey.ForegroundColor,UIColor.Gray,new NSRange(0,bareEntry.Placeholder.Length));
+				Control.TextColor = element.TextColor.ToUIColor();
+				var placeholder = element.Placeholder ?? string.Empty;
+				var placeholderColor = element.PlaceholderColor;
+				var s = new NSMutableAttributedString(placeholder);
+				s.AddAttribute(UIStringAttributeKey.ForegroundColor
+					, placeholderColor.ToUIColor(),
+					new NSRange(0, placeholder.Length));
 				Control.AttributedPlaceholder = s;
+
 			}
-			catch
+			catch(Exception exc)
 			{
+
 			}
 
 		}
 		protected override void OnElementPropertyChanged (object sender, System.ComponentModel.PropertyChangedEventArgs e)
 		{
-			base.OnElementPropertyChanged (sender, e);
-
-            if ((Element as StandardEntry).HasFrame)
+			var element = (Element as StandardEntry);
+			switch (e.PropertyName)
             {
-                if (Control != null) Control.BorderStyle = UITextBorderStyle.RoundedRect;
+				case "HasFrame":
+				case "Placeholder":
+				case "PlaceholderColor":
+				case "TextSize":
+				case "TextColor":
+					Recreate();
+					break;
             }
-            else
-            {
-                //Control.Layer.BorderWidth = 0;
-                if(Control !=null) Control.BorderStyle = UITextBorderStyle.None;
-            }
+			base.OnElementPropertyChanged(sender, e);
 		}
+
 
 	}
 }
