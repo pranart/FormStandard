@@ -6,7 +6,7 @@ namespace FormStandard
 	{
 		public StandardEntry()
 		{
-			TextSize = StandardEntrySize;
+			FontSize = StandardEntrySize;
 			VerticalOptions = LayoutOptions.Center;
 			HorizontalOptions = LayoutOptions.Fill;
 			FontSize = Device.GetNamedSize(NamedSize.Medium, this);
@@ -14,6 +14,7 @@ namespace FormStandard
 			TextColor = Color.Black;
 			this.Completed += Handle_Completed;
 			this.TextChanged += Handle_TextChanged;
+
 		}
 
         public static readonly BindableProperty HasFrameProperty =

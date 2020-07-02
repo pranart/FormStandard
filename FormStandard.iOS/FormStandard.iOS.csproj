@@ -91,6 +91,7 @@
   </ItemGroup>
   <ItemGroup>
     <Folder Include="Resources\" />
+    <Folder Include="Resources\Fonts\" />
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Properties\AssemblyInfo.cs" />
@@ -136,6 +137,12 @@
       <Project>{EFC62B2C-D2E3-4F9E-93DA-5B3FC26ED9F2}</Project>
       <Name>FormTest.iOS</Name>
     </ProjectReference>
+  </ItemGroup>
+  <ItemGroup>
+    <BundleResource Include="Resources\SukhumvitSet-Bold.ttf" />
+    <BundleResource Include="Resources\SukhumvitSet-Light.ttf" />
+    <BundleResource Include="Resources\SukhumvitSet-Medium.ttf" />
+    <BundleResource Include="Resources\SukhumvitSet-SemiBold.ttf" />
   </ItemGroup>
   <Import Project="$(MSBuildExtensionsPath)\Xamarin\iOS\Xamarin.iOS.CSharp.targets" />
   <Import Project="..\..\packages\Xamarin.Android.Arch.Lifecycle.Runtime.1.1.1.3\build\monoandroid90\Xamarin.Android.Arch.Lifecycle.Runtime.targets" Condition="Exists('..\..\packages\Xamarin.Android.Arch.Lifecycle.Runtime.1.1.1.3\build\monoandroid90\Xamarin.Android.Arch.Lifecycle.Runtime.targets')" />

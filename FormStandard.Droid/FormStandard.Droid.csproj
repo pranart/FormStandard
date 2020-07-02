@@ -226,9 +226,9 @@
     <Compile Include="ThaiLineBreaker\util\ThaiUtil.cs" />
     <Compile Include="ThaiLineBreaker\util\Util.cs" />
     <Compile Include="TopMargin.cs" />
-    <Compile Include="NeatLabelRenderer.cs" />
     <Compile Include="BorderlessPickerRenderer.cs" />
     <Compile Include="Navigate.cs" />
+    <Compile Include="NeatLabelRenderer.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="Resources\AboutResources.txt" />
@@ -251,6 +251,8 @@
   <ItemGroup>
     <Folder Include="Resources\drawable\" />
     <Folder Include="ThaiLineBreaker\" />
+    <Folder Include="Assets\" />
+    <Folder Include="Assets\Fonts\" />
   </ItemGroup>
   <ItemGroup>
     <ProjectReference Include="..\FormStandard\FormStandard.csproj">
@@ -268,6 +270,12 @@
   </ItemGroup>
   <ItemGroup>
     <EmbeddedResource Include="dictionary.txt" />
+  </ItemGroup>
+  <ItemGroup>
+    <AndroidAsset Include="Assets\Fonts\SukhumvitSet-SemiBold.ttf" />
+    <AndroidAsset Include="Assets\Fonts\SukhumvitSet-Medium.ttf" />
+    <AndroidAsset Include="Assets\Fonts\SukhumvitSet-Light.ttf" />
+    <AndroidAsset Include="Assets\Fonts\SukhumvitSet-Bold.ttf" />
   </ItemGroup>
   <Import Project="$(MSBuildExtensionsPath)\Xamarin\Android\Xamarin.Android.CSharp.targets" />
   <Import Project="..\..\packages\Xamarin.AndroidX.MultiDex.2.0.1.1\build\monoandroid90\Xamarin.AndroidX.MultiDex.targets" Condition="Exists('..\..\packages\Xamarin.AndroidX.MultiDex.2.0.1.1\build\monoandroid90\Xamarin.AndroidX.MultiDex.targets')" />

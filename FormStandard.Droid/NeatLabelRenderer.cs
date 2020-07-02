@@ -37,11 +37,19 @@ namespace FormStandard.Droid
 			TextView label = (TextView)Control; 
 			try
 			{
-                if(!string.IsNullOrEmpty(Element?.StyleId))
+				var element = Element as StandardLabel;
+				Typeface myFont;
+				if (element.FontAttributes.HasFlag(FontAttributes.Bold))
                 {
-                    Typeface font = Typeface.CreateFromAsset(FormsContext.Assets, Element?.StyleId+".ttf");
-                    label.Typeface = font;
-                }
+					myFont = Typeface.CreateFromAsset(Android.App.Application.Context.Assets, "SukhumvitSet_Bold.ttf");
+
+				}
+				else
+                {
+					myFont = Typeface.CreateFromAsset(Android.App.Application.Context.Assets, "SukhumvitSet_Light.ttf");
+
+				}
+				label.Typeface = myFont;				 
 
              }
             catch(System.Exception exc)

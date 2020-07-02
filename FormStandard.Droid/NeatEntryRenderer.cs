@@ -6,6 +6,7 @@ using FormStandard.Droid;
 using Android.Util;
 using Android.Graphics.Drawables;
 using Android.Content.Res;
+using Android.Graphics;
 
 [assembly: ExportRenderer (typeof (StandardEntry), typeof (StandardEntryRenderer))]
 namespace FormStandard.Droid
@@ -23,14 +24,31 @@ namespace FormStandard.Droid
 
 			Recreate ();
 		}
-		void Recreate()
-		{
+        void Recreate()
+        {
 
-			if (this.Control == null) return;
-			Control.SetPadding (0,0,0,0);
+            if (this.Control == null) return;
+            var element = (Element as StandardEntry);
+            if (element == null) return;
+            Control.SetPadding(0, 0, 0, 0);
+            Typeface myFont;
+            if (element.FontAttributes.HasFlag(FontAttributes.Bold))
+            {
+                myFont = Typeface.CreateFromAsset(Android.App.Application.Context.Assets, "SukhumvitSet_Bold.ttf");
 
-            Control.SetHintTextColor ((Element as StandardEntry).PlaceholderColor.ToAndroid());
-            Control.SetTextSize (ComplexUnitType.Mm,(float)(Element as StandardEntry).TextSize);
+            }
+            else
+            {
+                myFont = Typeface.CreateFromAsset(Android.App.Application.Context.Assets, "SukhumvitSet_Light.ttf");
+
+            }
+            Control.Typeface = myFont;
+            if (element.FontSize == 0.0)
+            {
+                element.FontSize = Device.GetNamedSize(NamedSize.Default,typeof(Entry));
+            }
+            Control.SetHintTextColor (element.PlaceholderColor.ToAndroid());
+            Control.SetTextSize (ComplexUnitType.Sp,(float)element.FontSize);
             UpdateBorders();
 
 		}
@@ -74,7 +92,7 @@ namespace FormStandard.Droid
             }
             else
             {
-                shape.SetStroke(3, Color.Transparent.ToAndroid());
+                shape.SetStroke(3, Android.Graphics.Color.Transparent);
             }
 
             this.Control.SetBackground(shape);

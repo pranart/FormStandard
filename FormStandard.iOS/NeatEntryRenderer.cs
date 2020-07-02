@@ -8,6 +8,7 @@ using FormStandard.iOS;
 using Xamarin.Forms.Internals;
 using Foundation;
 using System;
+using System.Diagnostics;
 
 [assembly: ExportRenderer (typeof (StandardEntry), typeof (StandardEntryRenderer))]
 namespace FormStandard.iOS
@@ -36,9 +37,23 @@ namespace FormStandard.iOS
 			try
 			{
 				var element = (Element as StandardEntry);
+				if(element.FontSize==0)
+                {
+					element.FontSize = Device.GetNamedSize(NamedSize.Default,typeof(Entry));
+                }
 				try
 				{
-                    Control.Font = UIFont.SystemFontOfSize((nfloat)element.FontSize * 1.0f);
+					if(element.FontAttributes.HasFlag(FontAttributes.Bold))
+                    {
+						Control.Font = UIFont.FromName("SukhumvitSet-Bold", (nfloat)element.FontSize);
+
+					}
+					else
+                    {
+						Control.Font = UIFont.FromName("SukhumvitSet-Light", (nfloat)element.FontSize);
+
+					}
+					//UIFont.SystemFontOfSize((nfloat)element.FontSize);
 				}
                 catch
                 {
@@ -58,11 +73,15 @@ namespace FormStandard.iOS
 				Control.TextColor = element.TextColor.ToUIColor();
 				var placeholder = element.Placeholder ?? string.Empty;
 				var placeholderColor = element.PlaceholderColor;
-				var s = new NSMutableAttributedString(placeholder);
-				s.AddAttribute(UIStringAttributeKey.ForegroundColor
-					, placeholderColor.ToUIColor(),
-					new NSRange(0, placeholder.Length));
-				Control.AttributedPlaceholder = s;
+				Control.AttributedPlaceholder = new NSAttributedString
+				(
+					element.Placeholder,
+					font: UIFont.FromName("SukhumvitSet-Light", (nfloat)element.FontSize),
+					foregroundColor: placeholderColor.ToUIColor(),
+					strokeWidth:1
+					
+				);
+
 
 			}
 			catch(Exception exc)
@@ -79,7 +98,7 @@ namespace FormStandard.iOS
 				case "HasFrame":
 				case "Placeholder":
 				case "PlaceholderColor":
-				case "TextSize":
+				case "FontSize":
 				case "TextColor":
 					Recreate();
 					break;

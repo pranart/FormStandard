@@ -19,9 +19,9 @@
                     Grid.Column="1"
                     HasFrame="false"
                     >
-                    <neat:StandardEntry.TextSize>
+                    <neat:StandardEntry.FontSize>
                         <OnIdiom x:TypeArguments="x:Double" Tablet="6" Phone="3"/>
-                    </neat:StandardEntry.TextSize>
+                    </neat:StandardEntry.FontSize>
                     <neat:StandardEntry.Behaviors>
                         <neat:EmptyEntryValidatorBehavior />
                         <neat:MaskedBehavior x:Name="MaskBehavior"/>

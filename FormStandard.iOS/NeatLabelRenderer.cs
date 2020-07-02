@@ -24,6 +24,8 @@ namespace FormStandard.iOS
 		private void Recreate()
 		{
 			StandardLabel customLabel = Element as StandardLabel;
+			if (customLabel == null) return;
+
 			try
 			{
 				Recreate (customLabel.FontSize);
@@ -32,26 +34,30 @@ namespace FormStandard.iOS
 		}
 		private void Recreate (double fontSize)
 		{
-			StandardLabel customLabel = Element as StandardLabel;
-			if (customLabel == null ) return;
+			StandardLabel element = Element as StandardLabel;
+			if (element == null ) return;
 
 			UILabel label = Control as UILabel;
             
 			//string typeface = customLabel.CustomTypeFace;
 			nfloat size = (nfloat)fontSize;
-			try
+			if (element.FontAttributes.HasFlag(FontAttributes.Bold))
 			{
-				label.Font = UIFont.FromName(Element.StyleId, (System.nfloat)fontSize);
-			}catch(Exception exc){
-				Debug.WriteLine (exc.ToString ());
+				Control.Font = UIFont.FromName("SukhumvitSet-Bold", (nfloat)element.FontSize);
+
+			}
+			else
+			{
+				Control.Font = UIFont.FromName("SukhumvitSet-Light", (nfloat)element.FontSize);
+
 			}
 
-			if (customLabel.Text == null)
+			if (element.Text == null)
 				return;
-			string text = customLabel.Text;
-			if (customLabel.Text.Length > customLabel.LineLimit-1)
+			string text = element.Text;
+			if (element.Text.Length > element.LineLimit-1)
 			{
-				string str = text.Substring (0, customLabel.LineLimit-1) + "ฯ";
+				string str = text.Substring (0, element.LineLimit-1) + "ฯ";
 				if (str.Substring (0, 1) == "\"") {
 					str = str + "\"";
 				}
