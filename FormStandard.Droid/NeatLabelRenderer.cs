@@ -34,7 +34,8 @@ namespace FormStandard.Droid
 		}
 		private void Recreate (double fontSize)
 		{
-			TextView label = (TextView)Control; 
+			TextView label = (TextView)Control;
+			label.SetMaxLines(Int32.MaxValue);
 			try
 			{
 				var element = Element as StandardLabel;

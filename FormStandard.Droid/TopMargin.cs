@@ -16,7 +16,7 @@ namespace FormStandard.Droid
         {
             if(Android.OS.Build.VERSION.SdkInt >= Android.OS.BuildVersionCodes.P)
             {
-                return 70;
+                return 20;
             }
             return 20;
         }
