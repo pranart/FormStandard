@@ -2,6 +2,7 @@
 using Xamarin.Forms.Platform.iOS;
 using FormStandard;
 using FormStandard.iOS;
+using System;
 
 [assembly: ExportRenderer(typeof(StandardFrame), typeof(StandardFrameRenderer))]
 namespace FormStandard.iOS
@@ -10,8 +11,15 @@ namespace FormStandard.iOS
     {
         protected override void OnElementChanged(ElementChangedEventArgs<Frame> e)
         {
-            base.OnElementChanged(e);
-            Layer.ShadowOpacity = 0.1f;
+            try
+            {
+                base.OnElementChanged(e);
+                Layer.ShadowOpacity = 0.1f;
+            }
+            catch(Exception exc)
+            {
+
+            }
         }
 
         public static void Initialize() { }
