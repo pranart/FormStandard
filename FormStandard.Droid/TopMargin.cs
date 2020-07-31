@@ -12,13 +12,14 @@ namespace FormStandard.Droid
         {
         }
 
-        public int GetTopMargin()
+        public Thickness GetTopMargin()
         {
             if(Android.OS.Build.VERSION.SdkInt >= Android.OS.BuildVersionCodes.P)
             {
-                return 20;
+                return new Thickness(0,20,0,0);
             }
-            return 20;
+            return new Thickness(0, 20, 0, 0);
+
         }
     }
 }

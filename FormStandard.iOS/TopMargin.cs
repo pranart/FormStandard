@@ -14,14 +14,17 @@ namespace FormStandard.iOS
 
         }
 
-        public int GetTopMargin()
+        public Thickness GetTopMargin()
         {
             var KeyWindow = UIApplication.SharedApplication?.KeyWindow;
-            if (KeyWindow == null) return 20;
+            if (KeyWindow == null)
+                return new Thickness(0,20,0,0);
+                
             var margin = (int)KeyWindow.SafeAreaInsets.Top;
-            if (margin == 0) margin = 20;
+            if (margin == 0) return new Thickness(0, 20, 0, 0);
 
-            return margin;
+
+            return new Thickness(0,margin,0,0);
                
         }
     }
