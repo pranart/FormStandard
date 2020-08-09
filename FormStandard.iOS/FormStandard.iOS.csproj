@@ -118,6 +118,7 @@
     <Compile Include="StandardFrameRenderer.cs" />
     <Compile Include="NeatLabelRenderer.cs" />
     <Compile Include="BorderlessPickerRenderer.cs" />
+    <Compile Include="SaveToAlbum.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="packages.config" />
