@@ -5,7 +5,7 @@ using Xamarin.Forms;
 
 namespace FormStandard
 {
-    public class StandardImage : CachedImage
+    public class StandardImage : Image
 	{
 		public StandardImage()
 		{

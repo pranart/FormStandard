@@ -45,12 +45,12 @@ namespace FormStandard.iOS
 				{
 					if(element.FontAttributes.HasFlag(FontAttributes.Bold))
                     {
-						Control.Font = UIFont.FromName("SukhumvitSet-Bold", (nfloat)element.FontSize*0.8f);
+						Control.Font = UIFont.FromName("Kanit-Bold", (nfloat)element.FontSize*0.8f);
 
 					}
 					else
                     {
-						Control.Font = UIFont.FromName("SukhumvitSet-Light", (nfloat)element.FontSize*0.8f);
+						Control.Font = UIFont.FromName("Kanit-Regular", (nfloat)element.FontSize*0.8f);
 
 					}
 					//UIFont.SystemFontOfSize((nfloat)element.FontSize);

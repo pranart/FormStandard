@@ -126,7 +126,7 @@
   </ItemGroup>
   <ItemGroup>
     <ProjectReference Include="..\FormStandard\FormStandard.csproj">
-      <Project>{25B74854-0AFB-419D-B0B0-53AE098480C1}</Project>
+      <Project>{90E1A494-2BCE-4FE5-AA3B-D04AB421B971}</Project>
       <Name>FormStandard</Name>
     </ProjectReference>
     <ProjectReference Include="..\FormTest\FormTest\FormTest.csproj">

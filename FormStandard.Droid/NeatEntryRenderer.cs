@@ -34,12 +34,12 @@ namespace FormStandard.Droid
             Typeface myFont;
             if (element.FontAttributes.HasFlag(FontAttributes.Bold))
             {
-                myFont = Typeface.CreateFromAsset(Android.App.Application.Context.Assets, "SukhumvitSet_Bold.ttf");
+                myFont = Typeface.CreateFromAsset(Android.App.Application.Context.Assets, "Kanit-Bold.ttf");
 
             }
             else
             {
-                myFont = Typeface.CreateFromAsset(Android.App.Application.Context.Assets, "SukhumvitSet_Light.ttf");
+                myFont = Typeface.CreateFromAsset(Android.App.Application.Context.Assets, "Kanit-Regular.ttf");
 
             }
             Control.Typeface = myFont;
