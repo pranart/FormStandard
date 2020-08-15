@@ -76,9 +76,9 @@ namespace FormStandard.iOS
 				Control.AttributedPlaceholder = new NSAttributedString
 				(
 					element.Placeholder ?? string.Empty,
-					font: UIFont.FromName("SukhumvitSet-Light", (nfloat)element.FontSize),
+					font: UIFont.FromName("Kanit-Regular", (nfloat)element.FontSize),
 					foregroundColor: placeholderColor.ToUIColor(),
-					strokeWidth:1
+					strokeWidth:4
 					
 				);
 
