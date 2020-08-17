@@ -43,12 +43,12 @@ namespace FormStandard.iOS
 			nfloat size = (nfloat)fontSize;
 			if (element.FontAttributes.HasFlag(FontAttributes.Bold))
 			{
-				Control.Font = UIFont.FromName("SukhumvitSet-Bold", (nfloat)element.FontSize);
+				Control.Font = UIFont.FromName("Kanit-Bold", (nfloat)element.FontSize);
 
 			}
 			else
 			{
-				Control.Font = UIFont.FromName("SukhumvitSet-Light", (nfloat)element.FontSize);
+				Control.Font = UIFont.FromName("Kanit-Regular", (nfloat)element.FontSize);
 
 			}
 
