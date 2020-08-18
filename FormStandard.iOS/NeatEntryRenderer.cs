@@ -77,8 +77,7 @@ namespace FormStandard.iOS
 				(
 					element.Placeholder ?? string.Empty,
 					font: UIFont.FromName("Kanit-Regular", (nfloat)element.FontSize),
-					foregroundColor: placeholderColor.ToUIColor(),
-					strokeWidth:4
+					foregroundColor: placeholderColor.ToUIColor()
 					
 				);
 
