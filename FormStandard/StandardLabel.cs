@@ -10,9 +10,7 @@ namespace FormStandard
             //FontFamily = "THSarabunNew";
             //FontSize = Device.GetNamedSize(NamedSize.Large, this);
             FontSize = Device.GetNamedSize(NamedSize.Medium, this);
-
         }
-
 
         public static readonly BindableProperty IsBoldProperty =
             //BindableProperty.Create<StandardLabel,bool>(X=>X.IsBold,false);

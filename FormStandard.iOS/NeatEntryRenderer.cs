@@ -77,8 +77,7 @@ namespace FormStandard.iOS
 				(
 					element.Placeholder ?? string.Empty,
 					font: UIFont.FromName("SukhumvitSet-Light", (nfloat)element.FontSize),
-					foregroundColor: placeholderColor.ToUIColor(),
-					strokeWidth:1
+					foregroundColor: placeholderColor.ToUIColor()
 					
 				);
 

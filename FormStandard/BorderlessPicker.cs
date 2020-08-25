@@ -3,7 +3,7 @@ using Xamarin.Forms;
 
 namespace FormStandard
 {
-    public class BorderlessPicker : Picker
+    public class BorderlessPicker : StandardPicker
     {
     }
 }

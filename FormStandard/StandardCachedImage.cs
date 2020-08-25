@@ -5,9 +5,9 @@ using Xamarin.Forms;
 
 namespace FormStandard
 {
-    public class StandardImage : Image
+    public class StandardCachedImage : CachedImage
 	{
-		public StandardImage()
+		public StandardCachedImage()
 		{
 			VerticalOptions = LayoutOptions.Fill;
 			HorizontalOptions = LayoutOptions.Fill;

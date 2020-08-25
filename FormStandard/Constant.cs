@@ -8,9 +8,54 @@ using System;
 [assembly: Preserve]
 namespace FormStandard
 {
-    public class Constant
+    public static class Constant
     {
         static public Func<bool> IsInitialized { get; set; }
+        static public bool IsDark { get; set; } = false;
+        static public bool IsWhite => !IsDark;
+        static public Color Green
+        {
+            get
+            {
+                if (IsDark)
+                {
+                    return Color.Black;
+                }
+                else
+                {
+                    return Color.FromHex("#F5FCFB");
+                }
+            }
+        }
+        static public Color White
+        {
+            get
+            {
+                if(IsDark)
+                {
+                    return Color.Black;
+                }
+                else
+                {
+                    return Color.White;
+                }
+            }
+        }
+        static public Color Black
+        {
+            get
+            {
+                if (IsDark)
+                {
+                    return Color.White;
+                }
+                else
+                {
+                    return Color.Black;
+                }
+            }
+        }
+
         static public int Scale(int x)
         {
             if (Device.Idiom == TargetIdiom.Tablet)

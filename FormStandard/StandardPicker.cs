@@ -9,11 +9,12 @@ namespace FormStandard
 		{
 			VerticalOptions = LayoutOptions.Fill;
 			HorizontalOptions = LayoutOptions.Fill;
+
 			this.SelectedIndexChanged += Handle_SelectedIndexChanged;
 
             if (Device.RuntimePlatform == Device.Android)
 			{
-				Opacity = 0;
+				//Opacity = 0;
 			}
 		}
 

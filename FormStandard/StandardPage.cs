@@ -4,11 +4,11 @@ using Xamarin.Forms;
 
 namespace FormStandard
 {
-    public class StandardPage : Page
+    public class StandardPage : ContentPage
 	{
 		public StandardPage ()
 		{
-			BackgroundColor = Color.Blue;
+			BackgroundColor = Constant.White;
 			NavigationPage.SetHasNavigationBar (this,false);
 		}
 	}
